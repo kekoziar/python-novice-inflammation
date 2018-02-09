@@ -141,7 +141,7 @@ for variable in collection:
     do things with variable
 ~~~
 
-Using the oxygen example above, the loop might look like this:
+Using the example above, the loop might look like this:
 
 ![loop_image](../fig/loops_image_num.png)
 
