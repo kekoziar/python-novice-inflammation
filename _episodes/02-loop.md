@@ -25,60 +25,60 @@ We have a dozen data sets right now, though, and more on the way.
 We want to create plots for all of our data sets with a single statement.
 To do that, we'll have to teach the computer how to repeat things.
 
-An example task that we might want to repeat is printing each character in a
-word on a line of its own.
+An example task that we might want to repeat is printing each number in a list 
+on a line of its own.
 
 ~~~
-word = 'lead'
+odds = [1, 3, 5, 7]
 ~~~
 {: .python}
 
-We can access a character in a string using its index. For example, we can get the first
-character of the word `'lead'`, by using `word[0]`. One way to print each character is to use
+We can access a number in the list using its index. For example, we can get the first
+number in the list `'odds'`, by using `odds[0]`. One way to print each number is to use
 four `print` statements:
 
 ~~~
-print(word[0])
-print(word[1])
-print(word[2])
-print(word[3])
+print(odds[0])
+print(odds[1])
+print(odds[2])
+print(odds[3])
 ~~~
 {: .python}
 
 ~~~
-l
-e
-a
-d
+1
+3
+5
+7
 ~~~
 {: .output}
 
 This is a bad approach for two reasons:
 
 1.  It doesn't scale:
-    if we want to print the characters in a string that's hundreds of letters long,
+    if we want to print the numbers in a list that contains hundreds of numbers,
     we'd be better off just typing them in.
 
 1.  It's fragile:
-    if we give it a longer string,
+    if we give it a longer list,
     it only prints part of the data,
     and if we give it a shorter one,
-    it produces an error because we're asking for characters that don't exist.
+    it produces an error because we're asking for numbers that don't exist.
 
 ~~~
-word = 'tin'
-print(word[0])
-print(word[1])
-print(word[2])
-print(word[3])
+odds = [1, 3, 5]
+print(odds[0])
+print(odds[1])
+print(odds[2])
+print(odds[3])
 
 ~~~
 {: .python}
 
 ~~~
-t
-i
-n
+1
+3
+5
 ~~~
 {: .output}
 
@@ -86,49 +86,49 @@ n
 ---------------------------------------------------------------------------
 IndexError                                Traceback (most recent call last)
 <ipython-input-3-7974b6cdaf14> in <module>()
-      3 print(word[1])
-      4 print(word[2])
-----> 5 print(word[3])
+      3 print(odds[1])
+      4 print(odds[2])
+----> 5 print(odds[3])
 
-IndexError: string index out of range
+IndexError: list index out of range
 ~~~
 {: .error}
 
 Here's a better approach:
 
 ~~~
-word = 'lead'
-for char in word:
-    print(char)
+odds = [1, 3, 5, 7]
+for num in odds:
+    print(num)
 
 ~~~
 {: .python}
 
 ~~~
-l
-e
-a
-d
+1
+3
+5
+7
 ~~~
 {: .output}
 
-This is shorter---certainly shorter than something that prints every character in a hundred-letter string---and
-more robust as well:
+This is shorter---certainly shorter than something that prints every number in a hundred-element 
+list---and more robust as well:
 
 ~~~
-word = 'oxygen'
-for char in word:
-    print(char)
+odds = [1, 3, 5, 7, 9, 11]
+for num in odds:
+    print(num)
 ~~~
 {: .python}
 
 ~~~
-o
-x
-y
-g
-e
-n
+1
+3
+5
+7
+9
+11
 ~~~
 {: .output}
 
@@ -143,48 +143,54 @@ for variable in collection:
 
 Using the oxygen example above, the loop might look like this:
 
-![loop_image](../fig/loops_image.png)
+![loop_image](../fig/loops_image_num.png)
 
-where each character (`char`) in the variable `word` is looped through and printed one character after another.
-The numbers in the diagram denote which loop cycle the character was printed in (1 being the first loop, and 6 being the final loop).
+where each number (`num`) in the variable `odds` is looped through and printed one number 
+after another.
+The other numbers in the diagram denote which loop cycle the character was printed in 
+(1 being the first loop, and 6 being the final loop).
 
 We can call the [loop variable]({{ page.root }}/reference/#loop-variable) anything we like,
 but there must be a colon at the end of the line starting the loop,
 and we must indent anything we want to run inside the loop. Unlike many other languages, there is no
-command to signify the end of the loop body (e.g. `end for`); what is indented after the `for` statement belongs to the loop.
+command to signify the end of the loop body (e.g. `end for`); what is indented after the `for` 
+statement belongs to the loop.
 
 
 > ## What's in a name?
 >
 >
-> In the example above, the loop variable was given the name `char` as a mnemonic; it is short for 'character'. 
-> We can choose any name we want for variables. We might just as easily have chosen the name `banana` for the loop variable, as long as we use the same name when we invoke the variable inside the loop:
+> In the example above, the loop variable was given the name `num` as a mnemonic; it is short for 'number'. 
+> We can choose any name we want for variables. We might just as easily have chosen the name `banana` 
+> for the loop variable, as long as we use the same name when we invoke the variable inside the loop:
 >
 > ~~~
-> word = 'oxygen'
-> for banana in word:
+> odds = [1, 3, 5, 7, 9, 11]
+> for banana in odds:
 >     print(banana)
 > ~~~
 > {: .python}
 >
 > ~~~
-> o
-> x
-> y
-> g
-> e
-> n
+> 1
+> 3
+> 5
+> 7
+> 9
+> 11
 > ~~~
 > {: .output}
 >
-> It is a good idea to choose variable names that are meaningful, otherwise it would be more difficult to understand what the loop is doing.
+> It is a good idea to choose variable names that are meaningful, 
+> otherwise it would be more difficult to understand what the loop is doing.
 {: .callout}
 
-Here's another loop that repeatedly updates a variable:
+Here's another loop that repeatedly updates a variable and prints characters in a string.
 
 ~~~
 length = 0
 for vowel in 'aeiou':
+    print(vowel)
     length = length + 1
 print('There are', length, 'vowels')
 ~~~
@@ -213,7 +219,25 @@ since there is nothing left in `'aeiou'` for Python to process,
 the loop finishes
 and the `print` statement on line 4 tells us our final answer.
 
-Note that a loop variable is just a variable that's being used to record progress in a loop.
+Finding the length of a string or list is such a common operation
+that Python actually has a built-in function to do it called `len`:
+
+~~~
+print(len('aeiou'))
+~~~
+{: .python}
+
+~~~
+5
+~~~
+{: .output}
+
+`len` is much faster than any function we could write ourselves,
+and much easier to read than a two-line loop;
+it will also give us the length of many other things that we haven't met yet,
+so we should always use it when we can.
+
+A loop variable is just a variable that's being used to record progress in a loop.
 It still exists after the loop is over,
 and we can re-use variables previously defined as loop variables as well:
 
@@ -233,23 +257,6 @@ after the loop, letter is c
 ~~~
 {: .output}
 
-Note also that finding the length of a string is such a common operation
-that Python actually has a built-in function to do it called `len`:
-
-~~~
-print(len('aeiou'))
-~~~
-{: .python}
-
-~~~
-5
-~~~
-{: .output}
-
-`len` is much faster than any function we could write ourselves,
-and much easier to read than a two-line loop;
-it will also give us the length of many other things that we haven't met yet,
-so we should always use it when we can.
 
 > ## From 1 to N
 >
