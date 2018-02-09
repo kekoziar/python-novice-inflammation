@@ -18,12 +18,10 @@ keypoints:
 - "Strings are immutable (i.e., the characters in them cannot be changed)."
 ---
 
-Just as a `for` loop is a way to do operations many times,
-a list is a way to store many values.
-Unlike NumPy arrays,
-lists are built into the language (so we don't have to load a library
-to use them).
-We create a list by putting values inside square brackets and separating the values with commas:
+Let's talk more about lists.  
+Unlike NumPy arrays, lists are built into the language (so we don't have to load a library to use them).
+As we've already seen, we create a list by putting values inside square brackets and separating the 
+values with commas:
 
 ~~~
 odds = [1, 3, 5, 7]
@@ -36,7 +34,7 @@ odds are: [1, 3, 5, 7]
 ~~~
 {: .output}
 
-We select individual elements from lists by indexing them:
+Here is a nifty way of selecting the first and last elements of a list:
 
 ~~~
 print('first and last:', odds[0], odds[-1])
@@ -48,22 +46,6 @@ first and last: 1 7
 ~~~
 {: .output}
 
-and if we loop over a list,
-the loop variable is assigned elements one at a time:
-
-~~~
-for number in odds:
-    print(number)
-~~~
-{: .python}
-
-~~~
-1
-3
-5
-7
-~~~
-{: .output}
 
 There is one important difference between lists and strings:
 we can change the values in a list,
@@ -104,6 +86,7 @@ TypeError: 'str' object does not support item assignment
 {: .error}
 
 does not.
+
 
 > ## Ch-Ch-Ch-Changes
 >
