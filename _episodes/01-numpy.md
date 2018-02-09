@@ -31,13 +31,8 @@ keypoints:
 In this lesson we will learn how to manipulate the inflammation dataset with Python. But before we 
 discuss how to deal with many data points, we will show how to store a single value on the computer.
 
-
-<<<<<<< HEAD
-The line below [assigns]({{ page.root }}/reference/#assign) the value `55` to a [variable]({{ page.root }}/reference/#variable) `weight_kg`:
-=======
 The line below [assigns]({{ page.root }}/reference/#assignment) the value `55` to a 
 [variable]({{ page.root }}/reference/#variable) `weight_kg`:
->>>>>>> 9.3.0-merge
 
 ~~~
 weight_kg = 55
