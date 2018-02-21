@@ -689,21 +689,23 @@ Blue regions in this heat map are low values, while red shows high values.
 As we can see,
 inflammation rises and falls over a 40-day period.
 
-> ## Some IPython Magic
->
-> If you're using an IPython / Jupyter notebook,
-> you'll need to execute the following command
-> in order for your matplotlib images to appear
-> in the notebook when `show()` is called:
->
-> ~~~
-> %matplotlib inline
-> ~~~
-> {: .python}
->
-> The `%` indicates an IPython magic function -
-> a function that is only valid within the notebook environment.
-> Note that you only have to execute this function once per notebook.
+Did the image show for everyone?  (if not, expand and go over the IPython Magic section)
+> > ## Some IPython Magic : viewing images in the notebook
+> >
+> > If you're using an IPython / Jupyter notebook,
+> > you'll need to execute the following command
+> > in order for your matplotlib images to appear
+> > in the notebook when `show()` is called:
+> >
+> > ~~~
+> > %matplotlib inline
+> > ~~~
+> > {: .python}
+> >
+> > The `%` indicates an IPython magic function -
+> > a function that is only valid within the notebook environment.
+> > Note that you only have to execute this function once per notebook.
+> {: .solution}
 {: .callout}
 
 Let's take a look at the average inflammation over time:
