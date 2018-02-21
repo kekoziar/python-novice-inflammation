@@ -708,6 +708,31 @@ Did the image show for everyone?  (if not, expand and go over the IPython Magic 
 > {: .solution}
 {: .callout}
 
+> ## Shortening Library Names
+>
+> Typing `matplotlib.pyplot` before every call to a library function
+> shows the value of using the tab-complete option.  
+> However, sometimes you're using a development environment that doesn't have tab-complete.  
+> In these cases, you can assign the library a variable name, 
+> and use that name instead of the full library name.
+> 
+> Using `matplotlib.pyplot` as an example, the syntax is
+> 
+> ~~~
+> import matplotlib.pyplot as myplot
+> ~~~
+> {: .python}
+>
+> Now, instead of typing `matplotlib.pyplot` every time, use `myplot`:
+> 
+> ~~~
+> image = myplot.imshow(data)
+> myplot.show()
+> ~~~
+> {: .python}
+> ![Heatmap of the Data](../fig/01-numpy_71_0.png)
+{: .callout}
+
 Let's take a look at the average inflammation over time:
 
 ~~~
