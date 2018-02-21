@@ -25,8 +25,8 @@ We have a dozen data sets right now, though, and more on the way.
 We want to create plots for all of our data sets with a single statement.
 To do that, we'll have to teach the computer how to repeat things.
 
-An example task that we might want to repeat is printing each number in a list 
-on a line of its own.
+An example task that we might want to repeat is accessing numbers in a list, which will 
+will do by printing each number on a line of its own.
 
 ~~~
 odds = [1, 3, 5, 7]
