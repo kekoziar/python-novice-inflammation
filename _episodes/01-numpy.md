@@ -43,6 +43,7 @@ A variable is just a name for a value,
 such as `x_val`, `current_temperature`, or `subject_id`.
 Python's variables must begin with a letter and are [case sensitive]({{ page.root }}/reference/#case-sensitive).
 We can create a new variable by assigning a value to it using `=`.
+
 When we are finished typing, press **Shift+Enter**. The notebook runs our command.
 
 Once a variable has a value, we can print it to the screen:
