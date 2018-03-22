@@ -5,14 +5,11 @@ permalink: /setup/
 root: ..
 ---
 
-In preparation for this lesson, you will need to download two zipped files and place them in the specified folder:
+In preparation for this lesson, you will need to download a zipped file.
 
-1. Make a new folder in your Desktop called `python-novice-inflammation`.
-2. Download [python-novice-inflammation-data.zip][zipfile1] and move the file to this folder.
-3. Also download [python-novice-inflammation-code.zip][zipfile2] and move it to the same folder.
-4. If the files aren't unzipped yet, double-click to unzip them. You should end up with
-two new folders called `data` and `code`.
-5. To get started, open a terminal or git bash. Go into the `data` folder by typing:
+1. Download [python-novice-inflammation.zip][zipfile] and move it to your Desktop.
+2. If the file isn't unzipped yet, double-click to unzip it. You should end up with a folder called `python-novice-inflammation` that contains two folders called `data` and `code`.
+3. To get started, open a terminal or git bash. Go into the `data` folder by typing:
 
 ~~~
 $ cd
@@ -37,6 +34,5 @@ Once it loads, select "New" --> "Notebook: Python 3" in the upper right corner o
 
 > ![screenshot of Jupyter interface showing "New" menu][startnotebook]
 
-[zipfile1]: {{ page.root }}/data/python-novice-inflammation-data.zip
-[zipfile2]: {{ page.root }}/code/python-novice-inflammation-code.zip
+[zipfile]: {{ page.root }}/files/python-novice-inflammation.zip
 [startnotebook]: {{ page.root }}/assets/img/startnotebook.jpg
