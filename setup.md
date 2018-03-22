@@ -12,7 +12,7 @@ In preparation for this lesson, you will need to download two zipped files and p
 3. Also download [python-novice-inflammation-code.zip][zipfile2] and move it to the same folder.
 4. If the files aren't unzipped yet, double-click to unzip them. You should end up with
 two new folders called `data` and `code`.
-5. To get started, open a terminal or git bash and type the command. Go into the `data` folder by typing:
+5. To get started, open a terminal or git bash. Go into the `data` folder by typing:
 
 ~~~
 $ cd
